@@ -2,7 +2,7 @@
 
 2、FFmpeg的循环推流脚本-LALA大神
 
-3、一键运行：wget -N --no-check-certificate "[https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh](https://raw.githubusercontent.com/Cosdyan/FFmpeg-stream/main/FFmpeg.sh)" && chmod +x FFmpeg.sh && ./FFmpeg.sh
+3、一键运行：wget -N --no-check-certificate "https://raw.githubusercontent.com/Cosdyan/FFmpeg-stream/main/FFmpeg.sh" && chmod +x FFmpeg.sh && ./FFmpeg.sh
 
 4、需要配合screen运行：yum install screen
 
