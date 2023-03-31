@@ -16,7 +16,7 @@
 
 9、视频加水印，水印位置默认在右上角。
 
-10、修改72行-73行（代码含义自己研究 -b:v 6000k视频码率；-b:a 128k音频码率）
+替换72行-74行（代码含义自己研究 -b:v 6000k视频码率；-b:a 128k音频码率）
 
   video=$(find ./ -type f | shuf -n 1)
   ffmpeg -re -i "$video" -preset ultrafast -vcodec libx264 -g 60 -b:v 6000k -c:a aac -b:a 128k -strict -2 -f flv ${rtmp}
