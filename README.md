@@ -1,6 +1,6 @@
 1、# FFmpeg-stream
 
-2、FFmpeg的循环推流脚本-LALA大神
+2、FFmpeg的循环推流脚本-LALA大神（不适配ARM）
 
 3、一键运行：wget -N --no-check-certificate "https://raw.githubusercontent.com/Cosdyan/FFmpeg-stream/main/FFmpeg.sh" && chmod +x FFmpeg.sh && ./FFmpeg.sh
 
