@@ -21,7 +21,7 @@ if [ $Choose = "yes" ];then
 	yum -y install wget
 	wget --no-check-certificate https://www.johnvansickle.com/ffmpeg/old-releases/ffmpeg-5.0.1-amd64-static.tar.xz
 	tar -xJf ffmpeg-5.0.1-amd64-static.tar.xz
-	cd ffmpeg-5.0.1-amd64-static.tar.xz
+	cd ffmpeg-5.0.1-amd64-static
 	mv ffmpeg /root/usr/bin && mv ffprobe /root/usr/bin && mv qt-faststart /root/usr/bin && mv ffmpeg-10bit /root/usr/bin
 fi
 if [ $Choose = "no" ]
