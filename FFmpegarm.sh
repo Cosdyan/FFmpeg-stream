@@ -22,7 +22,7 @@ if [ $Choose = "yes" ];then
 	wget --no-check-certificate https://www.johnvansickle.com/ffmpeg/old-releases/ffmpeg-5.0.1-amd64-static.tar.xz
 	tar -xJf ffmpeg-5.0.1-amd64-static.tar.xz
 	cd ffmpeg-5.0.1-amd64-static.tar.xz
-	mv ffmpeg /usr/bin && mv ffprobe /usr/bin && mv qt-faststart /usr/bin && mv ffmpeg-10bit /usr/bin
+	mv ffmpeg /root/usr/bin && mv ffprobe /root/usr/bin && mv qt-faststart /root/usr/bin && mv ffmpeg-10bit /root/usr/bin
 fi
 if [ $Choose = "no" ]
 then
