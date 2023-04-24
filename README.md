@@ -19,6 +19,7 @@
 10、视频加水印，水印位置默认在右上角。
 
 代码实例：ffmpeg -re -i "$video" -ss 0.5 -preset ultrafast -vcodec libx264 -g 60 -b:v 1500k -c:a aac -b:a 128k -strict -2 -f flv ${rtmp} 
+
 -re：以本机帧率读取输入（用于直播）
 
 -i "$video"：指定输入视频文件的路径
