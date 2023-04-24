@@ -18,11 +18,21 @@
 
 10、视频加水印，水印位置默认在右上角。
 
-11、替换72行-74行（代码含义自己研究 -b:v 6000k视频码率；-b:a 128k音频码率）
+代码实例：ffmpeg -re -i "$video" -ss 0.5 -preset ultrafast -vcodec libx264 -g 60 -b:v 1500k -c:a aac -b:a 128k -strict -2 -f flv ${rtmp} 
+-re：以本机帧率读取输入（用于直播）
+-i "$video"：指定输入视频文件的路径
+-ss 0.5：指定输入视频文件的起始时间偏移量为0.5秒
+-preset ultrafast：设置编码预设为ultrafast，这会优先考虑速度而不是输出质量
+-vcodec libx264：设置视频编解码器为libx264
+-g 60：设置GOP大小为60帧
+-b:v 1500k：将视频比特率设置为1500k（即每秒1500千位）
+-c:a aac：设置音频编解码器为AAC
+-b:a 128k：设置音频比特率为128k（即每秒128千位）
+-strict -2：设置AAC编码器的合规性级别
+-f flv：将输出格式设置为FLV
+${rtmp}：指定RTMP服务器的输出URL
 
-  video=$(find ./ -type f | shuf -n 1)
-  
-  ffmpeg -re -i "$video" -preset ultrafast -vcodec libx264 -g 60 -b:v 6000k -c:a aac -b:a 128k -strict -2 -f flv ${rtmp}
+根据实际需要自己添加或者修改即可
   
 12、LALA小站：https://lala.im/4816.html
 
