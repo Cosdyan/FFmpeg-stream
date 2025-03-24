@@ -68,9 +68,13 @@ then
     # 循环
 	while true
 	do
-		cd $folder
-		video=$(find ./ -type f | shuf -n 1)
-  		ffmpeg -re -i "$video" -ss 0.01 -preset ultrafast -vcodec libx264 -g 60 -b:v 5000k -c:a aac -b:a 128k -strict -2 -f flv ${rtmp}
+		cd "$folder"
+		video=$(find . -type f | shuf -n 1)
+  		echo "Now streaming: $video" #打印当前播放的文件名
+    		ffmpeg -re -ss 0.01 -i "$video" \
+      		    -preset ultrafast -vcodec libx264 -g 60 -b:v 6000k \
+	            -c:a aac -b:a 128k -f flv "$rtmp"
+  		#ffmpeg -re -i "$video" -ss 0.01 -preset ultrafast -vcodec libx264 -g 60 -b:v 5000k -c:a aac -b:a 128k -strict -2 -f flv ${rtmp}
 	done
 fi
 	}
